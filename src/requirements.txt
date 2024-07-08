@@ -1,0 +1,15 @@
+# NOTE:
+#   - We're using the binary version of the psycopg2 package here to eliminate
+#       dependencies for Postgres in the docker container
+#
+#   - The latest version of boto3 is 1.34.140 as of writing but we've pinned
+#       to a version from Jan 2022 here. AWS changed their API to be JSON-based
+#       in 2023 but Localstack doesn't support this yet.
+#       More info here: https://stackoverflow.com/a/77476794
+#
+
+boto3==1.20.40
+psycopg2-binary==2.9.9
+pyaes==1.6.1
+python-dotenv==1.0.1
+sqlalchemy==2.0.31
